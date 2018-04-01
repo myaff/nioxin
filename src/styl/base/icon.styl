@@ -1,0 +1,72 @@
+svg 
+  line-height: 1;
+  color: inherit;
+  vertical-align: middle;
+  
+  use
+    color: inherit;
+    fill: currentColor;
+    
+  &.stroked use
+    stroke: currentColor;
+  &.stroked-2 use
+    stroke: currentColor;
+    stroke-width: 2px;
+  &.stroked-3 use
+    stroke: currentColor;
+    stroke-width: 3px;
+  
+  &.no-fill use
+    fill: none;
+  
+  &.hover-fill use
+    fill: none;
+    &:hover
+      fill: currentColor;
+  
+  &.active-fill use
+    fill: none;
+  &.active-fill.is-active use
+    fill: currentColor;
+
+.icon {
+  display: inline-block;
+  size(1em);
+  // sizes
+  &--small {
+    size(0.75em);
+  }
+  &--20 {
+    size(1.25rem);
+  }
+  &--medium {
+    size(1.5rem);
+  }
+  &--big {
+    size(2em);
+  }
+  &--large {
+    size(3em);
+  }
+  
+  &--block {
+    display: block;
+    size(100%);
+  }
+}
+
+.dropdown-icon {
+  display: block;
+  size(8px);
+  absolute(50%);
+  margin-top: -4px;
+  border-bottom: 1px solid $wb.grey-light;
+  border-right: 1px solid $wb.grey-light;
+  transform: rotate(45deg);
+  transform-origin: center;
+  transition: transform 0.3s;
+  /*
+  .is-opened & {
+    transform: rotate(-135deg);
+  }*/
+}

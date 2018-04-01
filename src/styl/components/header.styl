@@ -1,0 +1,47 @@
+.header {
+  fixed(0px, 0px);
+  width: 100%;
+  background: $white.bg;
+  padding: 1rem 0;
+  z-index: 9;
+  border-bottom: 1px solid $gray.bg;
+  
+  & + .page {
+    margin-top: 60px;
+  }
+  
+  &__content {
+    flexy(space-between, center);
+  }
+  
+  &__logo {
+    flex: 0 0 300px;
+  }
+  
+  &__btn-menu {
+    flex: 0 0 300px;
+  }
+  
+  &__text {
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.logo {
+  &__text {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  &__icon {
+    height: 28px;
+  }
+  &--elle &__icon {
+    width: 64px;
+  }
+  &--nioxin &__icon {
+    width: 300px;
+  }
+}

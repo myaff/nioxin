@@ -1,0 +1,36 @@
+//- social
+mixin social(isInline, hasTitle)
+  .social(class=isInline ? "social--inline" : '')
+    if hasTitle
+      .social__title Поделитьcя
+    if isInline && hasTitle
+      .social__delimiter
+    each item in socials
+      a.social__link(href="#", target="_blank", data-type=item.type)
+        svg.icon.social__icon: use(xlink:href="#" + item.icon)/
+        span.social__text= item.text
+
+mixin icon(iconName)
+  svg&attributes(attributes).icon: use(xlink:href="#" + iconName)
+
+mixin allGirl(girl)
+  div&attributes(attributes).all-girl
+    .all-girl__media
+      .all-girl__img: img(src=girl.img, alt=girl.name.first + ' ' + girl.name.family)
+      .all-girl__link
+        a.btn.btn--primary(href=girl.url) Читать
+      .all-girl__product: img(src=girl.productImg, alt="")
+    .all-girl__info
+      .all-girl__name
+        .name= girl.name.first
+        .family= girl.name.family
+      .all-girl__profession= girl.profession.short
+
+mixin otherGirl(girl)
+  div&attributes(attributes).other-girl
+    a.other-girl__link(href=girl.url)
+      .other-girl__profession= girl.profession.short
+      .other-girl__img: img(src=girl.img, alt=girl.name.first + ' ' + girl.name.family)
+      .other-girl__name
+        .name= girl.name.first
+        .family= girl.name.family

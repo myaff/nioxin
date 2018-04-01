@@ -1,0 +1,38 @@
+.main-nav {
+  display: none;
+  padding: 1.25rem 0;
+  &__list {
+    no-style-list();
+    flexy(space-between, stretch);
+  }
+  &__item {
+    flex: 0 0 160px;
+  }
+  &__link {
+    display: block;
+    color: $gray.text;
+    text-align: center;
+    font: 500 13px/1.4 $font-base;
+    text-decoration: none;
+    text-transform: uppercase;
+    transform-origin: top center;
+    transition: transform 0.7s;
+    
+    &:hover {
+      transform: translateY(-20px);
+      color: $gray.text;
+    }
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+  &__img {
+    display: block;
+    circle(160px);
+  }
+  &__text {
+    margin: 1rem auto 0;
+    max-width: 140px;
+  }
+}

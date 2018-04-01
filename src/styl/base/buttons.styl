@@ -1,0 +1,144 @@
+.btn {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  padding: 14px 2rem;
+  border: 2px solid transparent;
+  border-radius: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  box-shadow: none;
+  transition: all 0.3s;
+  
+  {hover-focus-acitve} {
+    outline: 0;
+  }
+  
+  // **** sizes ****
+  &--small {
+    font-size: 15px;
+    padding: 10px 2rem 11px;
+    min-width: 160px;
+  }
+  
+  // **** themes  ****
+  &--primary {
+    color: $white.text;
+    background: $primary.bg;
+    border-color: transparent;
+    
+    {hover-focus-active} {
+      color: $white.text;
+      background: darken($primary.bg, 20%);
+      border-color: transparent;
+    }
+  }
+  &--secondary {
+    color: $white.text;
+    background: $black.bg;
+    border-color: transparent;
+    
+    {hover-focus-active} {
+      color: $white.text;
+      border-color: transparent;
+      background: $black.bg;
+    }
+  }
+  &--primary-outline {
+    color: $primary.text;
+    background: transparent;
+    border-color: $primary.text;
+    
+    {hover-focus-active} {
+      color: $white.text;
+      background: $primary.bg;
+    }
+  }
+  &--secondary-outline {
+    color: $black.text;
+    background: transparent;
+    border-color: $black.text;
+    
+    {hover-focus-active} {
+      color: $white.text;
+      background: $black.bg;
+    }
+  }
+  
+  &--plain {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 14px;
+    min-width: 0;
+    
+    background: transparent;
+    color: inherit;
+  }
+  
+}
+
+.btn-menu {
+  display: block;
+  relative();
+  size(60px, 23px);
+  background: transparent;
+  border: 0;
+  color: $black.text;
+  cursor: pointer;
+  
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    absolute(0, 0px);
+    size(100%, 5px);
+    background: currentColor;
+    transform-origin: left center;
+    transition: transform 0.3s;
+    border-radius: 5px;
+  }
+  
+  &::before {
+    top: 3px;
+  }
+  &::after {
+    bottom: 2px;
+    transform: scaleX(0.5);
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
+  &.is-open {
+    &::before,
+    &::after {
+      transform: scaleX(0);
+    }
+  }
+  
+  {hover-focus-active} {
+    outline: none;
+  }
+  
+  &__text {
+    font: bold 23px/1 $font-base;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: underline;
+    opacity: 0;
+    transform: translateX(60px);
+    transform-origin: left center;
+    transition: opacity 0.3s, transform 0.3s, color 0.3s;
+    
+    ^[0].is-open & {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    ^[0].is-open:hover & {
+      color: $primary.text;
+    }
+  }
+}

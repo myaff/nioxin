@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nioxin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="build/css/main.css" rel="stylesheet">
+    <script src="build/js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="build/img/svg/sprite.js"></script>
+  </head>
+  <body>
+    <div class="svg-sprite l-hidden"></div>
+    <script>$('.svg-sprite').html(SVG_SPRITE);</script>
+    <div class="layout layout--undefined">
+      <!-- header-->
+      <div class="header">
+        <div class="l-container">
+          <div class="header__content">
+            <div class="header__btn-menu">
+              <div class="btn-menu">
+                <div class="btn-menu__text">Закрыть</div>
+              </div>
+            </div>
+            <div class="header__text">Специальный проект</div>
+            <div class="header__logo logo logo--nioxin">
+                    <svg class="icon logo__icon">
+                      <use xlink:href="#nioxin"></use>
+                    </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer-->
+      <div class="footer">
+        <div class="l-container">
+          <div class="footer__content">
+                  <div class="social social--inline">
+                    <div class="social__title">Поделитьcя</div>
+                    <div class="social__delimiter"></div><a class="social__link" href="#" target="_blank" data-type="vk">
+                      <svg class="icon social__icon">
+                        <use xlink:href="#vk"/>
+                      </svg><span class="social__text">Vkontakte</span></a><a class="social__link" href="#" target="_blank" data-type="fb">
+                      <svg class="icon social__icon">
+                        <use xlink:href="#fb"/>
+                      </svg><span class="social__text">Facebook</span></a><a class="social__link" href="#" target="_blank" data-type="tw">
+                      <svg class="icon social__icon">
+                        <use xlink:href="#tw"/>
+                      </svg><span class="social__text">Twitter</span></a>
+                  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="build/js/vendor/owl.carousel.min.js"></script>
+    <script src="build/js/main.js"></script>
+  </body>
+</html>

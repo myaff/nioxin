@@ -1,0 +1,22 @@
+extends template
+
+prepend page
+  - var layout = 'home';
+  - var currentPage = 'home';
+
+block content
+  .page.page--home
+    .l-container
+      .page__heading.mx-auto
+        .tp-heading--styled-1
+          .subtitle спасение волос за месяц:
+          .title SOS-программа
+    .all-girls
+      .l-container
+        .all-girls__list
+          each girl, index in girls
+            .all-girls__item
+              +allGirl(girl)(class="girl--" + index)
+        .all-girls__text
+          .square-brakets
+            p Четыре популярных блогера столкнулись c&nbsp;совершенно разными проблемами волос. Устранить их&nbsp;они решили с&nbsp;помощью комплексных программ Nioxin, способных выполнить самые сложные задачи уже за&nbsp;месяц. Все это время мы&nbsp;наблюдали за&nbsp;девушками и&nbsp;тем, как меняются их&nbsp;локоны.

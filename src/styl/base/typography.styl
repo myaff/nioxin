@@ -1,0 +1,150 @@
+$text-color = $wb.black;
+$link-color = $indigo.base;
+$link-color--active = $link-color;
+
+html, body {
+  font-size: $font-size-base;
+  line-height: 1.5;
+  font-family: $font-base;
+  color: $text-color;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  
+  {hover-focus-active} {
+    color: $link-color--active;
+    outline: 0;
+  }
+  
+  .notification {
+    font: 500 12px/1 $font-accent;
+    color: $wb.white;
+    background: $indigo.base;
+    circle(20px);
+    padding: 4px 0px;
+    text-align: center;
+    vertical-align: super;
+    display: inline-block;
+  }
+}
+
+.tp-heading {
+  &--styled-1 {
+    .subtitle {
+      font: 300 30px/1.33 $font-base;
+      color: $white.text;
+      text-align: right;
+      text-transform: uppercase;
+    }
+    .title {
+      font: italic 500 120px/1 $font-accent;
+      color: $white.text;
+      text-align: left;
+      margin-top: -28px;
+    }
+  }
+}
+.tp-subheading {
+  
+}
+.tp-body {
+  &--big {
+    font-family: $font-accent;
+    font-size: 20px;
+  }
+  &--medium {
+    font-size: 18px;
+  }
+  &--base {
+    font-size: $font-size-base;
+    line-height: 1.5;
+  }
+  &--small {
+    font-size: 14px;
+  }
+  &--smaller {
+    font-size: 13px;
+  }
+}
+b, strong {
+  font-weight: 500;
+}
+.tp-text {
+  for $align in (left right center) {
+    &--{$align} {
+      text-align: $align;
+    }
+  }
+  &--light {
+    opacity: 0.8;
+  }
+  &--lighter {
+    opacity: 0.6;
+  }
+  &--lightest {
+    opacity: 0.5;
+  }
+  &--upper {
+    text-transform: uppercase;
+  }
+  &--lower {
+    text-transform: lowercase;
+  }
+  &--truncate {
+    truncate();
+  }
+  &--nowrp {
+    white-space: nowrap;
+  }
+}
+
+p {
+  margin: 1em 0;
+  no-childs-margin();
+}
+
+.img-circle {
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  img {
+    display: block;
+  }
+}
+
+.rounded {
+  border-radius: $border-radius-base;
+}
+
+.icon-string {
+  &.icon,
+  &.text {
+    vertical-align: middle;
+  }
+}
+
+.square-brakets {
+  max-width: 780px;
+  margin: 1em auto;
+  padding: 0 5rem;
+  font: normal 18px/1.56 $font-base;
+  text-align: center;
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    absolute(0px);
+    size(20px, 100%);
+    border: 1px solid currentColor;
+  }
+  &::before {
+    left: 0px;
+    border-right: 0;
+  }
+  &::after {
+    right: 0;
+    border-left: 0;
+  }
+}

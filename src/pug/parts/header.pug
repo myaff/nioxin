@@ -1,0 +1,19 @@
+include ../mixins
+// header
+.header
+  .l-container
+    .header__content
+      if layout == 'home'
+        .header__logo.logo.logo--elle
+          span.logo__text Специальный проект
+          +icon('elle')(class="logo__icon ml-3")
+      else
+        .header__btn-menu
+          .btn-menu
+            .btn-menu__text Закрыть
+        .header__text Специальный проект
+      .header__logo.logo.logo--nioxin
+        +icon('nioxin')(class="logo__icon")
+    if layout == 'detail'
+      .header__menu
+        include ../components/main-nav

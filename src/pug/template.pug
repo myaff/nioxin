@@ -1,0 +1,25 @@
+include ./mixins
+doctype html
+block page
+  html
+    head
+      block head
+        title Nioxin
+        //- include parts/favicon
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(href="build/css/main.css", rel="stylesheet")
+        //- link(rel="icon" type="image/png" href="favicons.png" sizes="16x16")
+        script(src="build/js/vendor/jquery-3.2.1.min.js")
+        script(src="build/img/svg/sprite.js")
+    body
+      .svg-sprite.l-hidden
+      script
+        | $('.svg-sprite').html(SVG_SPRITE);
+      .layout(class="layout--" + layout)
+        include parts/header
+        block content
+        include parts/footer
+      
+      script(src="build/js/vendor/owl.carousel.min.js")
+      script(src="build/js/main.js")

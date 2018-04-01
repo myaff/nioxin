@@ -1,0 +1,156 @@
+.all-girls {
+  background: url('/build/img/noise-bg.png') bottom center no-repeat;
+  
+  &__list {
+    margin: 0 (-0.5 * $grid-gutter);
+    flexy(flex-start, stretch);
+  }
+  
+  &__item {
+    padding: 0 ($grid-gutter / 2);
+    flex: 0 0 25%;
+  }
+  
+  &__text {
+    padding: 2rem 0 3rem;
+  }
+}
+
+.all-girl {
+  &__media {
+    size(100%, 450px);
+    background: $white.text;
+  }
+  &__info {
+    margin-top: 1.25rem;
+    text-align: center;
+  }
+  &__product {
+    absolute();
+    max-size(125px, 272px);
+    transition: opacity 0.3s;
+    
+    img {
+      max-size(100%);
+      object-fit: contain;
+    }
+    ^[0]:hover & {
+      opacity: 0;
+    }
+    ^[0]--istomina & {
+      bottom: 0px;
+      left: 25px;
+      animation: prod-1 10s infinite;
+    }
+    ^[0]--popova & {
+      top: -50px;
+      right: 25px;
+      animation: prod-2 12s infinite;
+    }
+    ^[0]--phillipova & {
+      bottom: 45px;
+      right: -20px;
+      animation: prod-3 10s infinite;
+    }
+    ^[0]--varapanova & {
+      bottom: -20px;
+      left: 40px;
+      animation: prod-4 12s infinite;
+    }
+  }
+  &__link {
+    absolute();
+    right: -10px;
+    bottom: 45px;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+    
+    ^[0]:hover & {
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+  &__name {
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__profession {
+    font-size: 15px;
+    margin-top: 0.5em;
+  }
+  
+  &__img {
+    height: 100%;
+    filter: grayscale(1);
+    transition: filter 0.2s;
+    img {
+      display: block;
+    }
+    ^[0]:hover & {
+      filter: grayscale(0)
+    }
+    ^[0]--istomina & {
+      padding-top: 20px;
+      flexy(flex-end, flex-start);
+    }
+    ^[0]--popova & {
+      flexy(center, flex-start);
+    }
+    ^[0]--phillipova & {
+      padding-top: 20px;
+      flexy(flex-start, flex-start);
+    }
+    ^[0]--varapanova & {
+      flexy(flex-end, center);
+    }
+  }
+  
+}
+
+@keyframes prod-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes prod-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes prod-3 {
+  0% {
+    transform: translateY(-25px);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(-25px);
+  }
+}
+@keyframes prod-4 {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}

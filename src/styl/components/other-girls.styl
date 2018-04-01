@@ -1,0 +1,61 @@
+.other-girls {
+  &__list {
+    flexy(center, stretch);
+  }
+  &__item {
+    flex: 0 0 300px;
+    padding: 0 10px;
+    
+    &:first-child,
+    &:last-child {
+      margin-top: 5rem;
+    }
+  }
+}
+
+.other-girl {
+  background: $white.text;
+  padding-left: 30px;
+  transform-origin: top center;
+  transition: transform 0.7s;
+  
+  &:hover {
+    transform: translateY(-20px);
+  }
+  &__link {
+    display: block;
+    color: $black.text;
+    &:hover {
+      color: inherit;
+    }
+  }
+  &__profession {
+    font: bold 15px/1.87 $font-base;
+    padding: 6px 0;
+    padding-right: 30px;
+    
+    &::after {
+      content: '';
+      display: block;
+      circle(10px);
+      absolute(15px);
+      right: 15px;
+      background: #3a3a3a;
+    }
+  }
+  
+  &__img {
+    height: 310px;
+    overflow: hidden;
+  }
+  
+  &__name {
+    padding: 20px 0;
+    .first {
+      font: bold 25px/30px $font-base;
+    }
+    .family {
+      font: bold 35px/30px $font-base;
+    }
+  }
+}

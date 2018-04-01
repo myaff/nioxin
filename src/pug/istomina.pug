@@ -1,0 +1,15 @@
+extends template
+
+prepend page
+  - var layout = 'detail';
+  - var currentPage = 'istomina';
+
+block content
+  .page.page--detail.page--istomina
+    .other-girls
+      .l-container
+        .other-girls__list
+          each girl, index in girls
+            if index != currentPage
+              .other-girls__item
+                +otherGirl(girl)

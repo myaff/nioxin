@@ -1,4 +1,10 @@
 .other-girls {
+  padding-top: 5rem
+  background: url('/build/img/bg-2.jpg') top -450px center no-repeat;
+  &__heading {
+    margin: 0 auto 20px;
+    max-width: 320px;
+  }
   &__list {
     flexy(center, stretch);
   }
@@ -9,6 +15,36 @@
     &:first-child,
     &:last-child {
       margin-top: 5rem;
+    }
+  }
+  
+  .dots {
+    absolute();
+    size(100%);
+  }
+  .dot {
+    absolute();
+    size(49px);
+    background: url('/build/img/point.png') center no-repeat;
+    &--1 {
+      top: -30px;
+      left: -160px;
+    }
+    &--2 {
+      top: -30px;
+      left: -80px;
+    }
+    &--3 {
+      top: -5px;
+      right: 85px;
+    }
+    &--4 {
+      top: 75px;
+      right: 85px;
+    }
+    &--5 {
+      top: 75px;
+      right: 5px;
     }
   }
 }

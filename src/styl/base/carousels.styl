@@ -1,19 +1,15 @@
 .carousel {
-  &--default,
-  &--simple {
+  &--default {
     .owl-nav {
-      absolute();
-      size(81px, 20px);
-      bottom: $spacers.six.y;
-      right: $spacers.fifteen.x;
+      absolute(50%, 0px);
+      margin: -30px 0;
       flexy(space-between, center);
-      @media $display-breakpoints.sm-and-up {
-        display: none;
-      }
+      width: 100%;
     }
     .owl-prev,
     .owl-next {
-      size(33px, 20px);
+      size(50px, 60px);
+      padding: 0 10px;
       cursor: pointer;
       .icon {
         display: block;
@@ -21,218 +17,30 @@
         line-height: 1;
       }
       &.disabled {
-        opacity: 0.3;
+        //opacity: 0.3;
       }
     }
     .owl-dots {
       absolute();
-      bottom: $spacers.six.y;
-      right: $spacers.thirty.x;
-      flexy(flex-end, center);
-      @media $display-breakpoints.ms-and-down {
-        display: none;
-      }
+      bottom: 100%;
+      right: 120px;
+      flexy(flex-end, flex-end);
     }
     .owl-dot {
-      circle(0.75rem);
-      margin-left: $spacers.four.x;
-      background: $wb.white;
-      opacity: 0.6;
-      transition: opacity 0.3s;
+      size(80px, 30px);
+      margin-left: 1px;
+      background: $primary.light;
+      transition: all 0.3s;
+      font: bold 16px/1 $font-base;
+      color: $black.text;
+      padding: 7px;
+      text-align: center;
       
       &.active {
-        opacity: 1;
-      }
-    }
-  }
-  &--simple {
-    .owl-nav {
-      display: flex;
-      @media $display-breakpoints.ms-and-down {
-        left: ($spacers.two.x * -1);
-        right: ($spacers.two.x * -1);
-        width: auto;
-        bottom: 30vw;
-      }
-      @media $display-breakpoints.sm-and-up {
-        left: 0;
-      }
-    }
-  }
-  @media $display-breakpoints.ms-and-down {
-    &--mobile {
-      .owl-item {
-        padding: 0 $spacers.four.x;
-      }
-      .owl-nav {
-        absolute(60px, -20px);
-        right: -20px;
-        width: auto;
-        flexy(space-between, center);
-      }
-      .owl-prev,
-      .owl-next {
-        size(40px);
-        padding: 10px;
-        margin: -20px 0;
-        color: $indigo.base;
-        .icon {
-          display: block;
-          size(100%);
-          line-height: 1;
-        }
-        
-        &.disabled {
-          color: #dedede;
-        }
-      }
-    }
-  }
-  &--in-tab,
-  &--fluid,
-  &--fluid-swipe {
-    .owl-stage {
-      flexy(flex-start, stretch);
-    }
-    .owl-nav {
-      absolute(-65px);
-      right: 0;
-      size(81px, 20px);
-      flexy(space-between, center);
-      @media $display-breakpoints.ms-and-down {
-        //display: none;
-      }
-    }
-    .owl-prev,
-    .owl-next {
-      size(33px, 20px);
-      cursor: pointer;
-      .icon {
-        display: block;
-        size(100%);
-        line-height: 1;
-      }
-      &.disabled {
-        opacity: 0.3;
-      }
-    }
-    .owl-dots {
-      absolute();
-      bottom: $spacers.six.y;
-      right: $spacers.thirty.x;
-      flexy(flex-end, center);
-      @media $display-breakpoints.ms-and-down {
-        display: none;
-      }
-    }
-    .owl-dot {
-      circle(0.5rem);
-      margin-left: $spacers.three.x;
-      background: $indigo.base;
-      opacity: 0.3;
-      transition: opacity 0.3s;
-      
-      &.active {
-        opacity: 1;
-      }
-    }
-  }
-  &--in-tab,
-  &--fluid-swipe {
-    @media $display-breakpoints.ms-and-down {
-      &.carousel--tariffs,
-      &.carousel--services {
-        width: 100vw;
-        margin: 0 -20px;
-        .owl-stage {
-          padding: 0 20px;
-        }
-        .owl-item {
-          width: 320px!important;
-          flex: 0 0 320px;
-        }
-      }
-    }
-  }
-  &--swipe {
-    @media $display-breakpoints.sm-and-down {
-      width: 100vw;
-      margin: 0 -20px;
-      padding-bottom: 20px;
-      .owl-stage {
-        padding: 0 20px;
-        flexy(flex-start, flex-start);
-      }
-      .owl-item {
-        float: none;
-        width: 347px!important;
-        flex: 0 0 347px;
-      }
-    }
-    @media $display-breakpoints.ms-and-down {
-      .owl-item {
-        width: 320px!important;
-        flex: 0 0 320px;
-      }
-    }
-  }
-  &--in-tab {
-    display: block;
-    transition: opacity 0.3s 0s;
-  }
-  &--services {
-    .owl-nav {
-      absolute(-115px);
-      right: 0;
-      size(81px, 20px);
-      flexy(space-between, center);
-      @media $display-breakpoints.sm-and-up {
-        top: -125px;
-      }
-    }
-    .owl-prev,
-    .owl-next {
-      size(33px, 20px);
-      cursor: pointer;
-      .icon {
-        display: block;
-        size(100%);
-        line-height: 1;
-      }
-      &.disabled {
-        opacity: 0.3;
-      }
-    }
-  }
-  &--devices {
-    .internet-devices & {
-      .owl-dots {
-        display: none;
-      }
-    }
-    @media $display-breakpoints.ms-and-down {
-      .owl-nav {
-        left: 0;
-        flexy(space-between, center);
-        .internet-devices & {
-          padding: 0 10px;
-        }
-      }
-      .owl-prev,
-      .owl-next {
-        size(40px);
-        padding: 8px;
-        margin: -20px 0;
-        color: $indigo.base;
-        .icon {
-          display: block;
-          size(100%);
-          line-height: 1;
-        }
-        
-        &.disabled {
-          color: #dedede;
-        }
+        height: 50px;
+        background: $black.bg;
+        color: $white.text;
+        padding: 17px 7px;
       }
     }
   }

@@ -1,0 +1,60 @@
+.products {
+  &__list {
+    flexy(space-between, stretch);
+    margin-top: 2rem;
+  }
+  &__item {
+    flex: 0 0 25%;
+  }
+}
+
+.product {
+  &__link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    
+    {hover-focus-active} {
+      color: inherit;
+      text-decoration: none;
+      outline: none;
+    }
+  }
+  
+  &__name {
+    font-size: 14px;
+    line-height: 1.3;
+    text-align: left;
+    max-width: 200px;
+    margin: 1.25rem auto 0;
+  }
+  
+  &__img {
+    margin: 4px auto;
+    text-align: center;
+    circle(194px);
+    overflow: hidden;
+    top: 3px;
+    transition: all 0.7s linear;
+    
+    .products:hover & {
+      width: 100%;
+      height: 320px;
+      border-radius: 0;
+    }
+    
+    &-wrapper {
+      margin: 0 -30px;
+    }
+    &-bg {
+      circle(200px);
+      absolute(0px, 50%);
+      transform: translateX(-50%);
+      
+      .page--istomina & {
+        background: url('/build/img/istomina/circle.png') center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}

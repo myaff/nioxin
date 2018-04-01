@@ -7,43 +7,43 @@
 "pages": [
   {
     "url": "https://www.nioxin.com/ru-RU/salonfinder",
-    "text": "найти салоны Nioxin",
-    "img": "/build/images/menu/salon-fibder.png",
+    "text": "найти&nbsp;салоны Nioxin",
+    "img": "/build/img/menu/salon-finder.png",
     "isActive": true,
     "isBlank": true
   },
   {
     "url": "istomina.html",
     "text": "Карина Истомина",
-    "img": "/build/images/menu/istomina.png",
+    "img": "/build/img/menu/istomina.png",
     "isActive": true,
     "isBlank": false
   },
   {
     "url": "popova.html",
     "text": "Анастасия Попова",
-    "img": "/build/images/menu/popova.png",
+    "img": "/build/img/menu/popova.png",
     "isActive": false,
     "isBlank": false
   },
   {
     "url": "phillipova.html",
     "text": "София Филиппова",
-    "img": "/build/images/menu/phillipova.png",
+    "img": "/build/img/menu/phillipova.png",
     "isActive": false,
     "isBlank": false
   },
   {
     "url": "varapanova.html",
     "text": "Юлия Варапанова",
-    "img": "/build/images/menu/varapanova.png",
+    "img": "/build/img/menu/varapanova.png",
     "isActive": false,
     "isBlank": false
   },
   {
     "url": "#",
-    "text": "больше продуктов Nioxin",
-    "img": "/build/images/menumore-products/.png",
+    "text": "больше&nbsp;продуктов Nioxin",
+    "img": "/build/img/menu/more-products.png",
     "isActive": true,
     "isBlank": true
   }
@@ -71,17 +71,17 @@
         "url": "#"
       },
       {
-        "name": "Увлажняющий кондиционер, система&nbsp;3, 300&nbsp;ml",
+        "name": "Увлажняющий&nbsp;кондиционер, система&nbsp;3, 300&nbsp;ml",
         "img": "build/img/istomina/products/conditioner.png",
         "url": "#"
       },
       {
-        "name": "Питательная маска для&nbsp;кожи головы и&nbsp;волос, система&nbsp;3, 100&nbsp;ml",
+        "name": "Питательная&nbsp;маска&nbsp;для&nbsp;кожи головы&nbsp;и&nbsp;волос,&nbsp;система&nbsp;3,&nbsp;100&nbsp;ml",
         "img": "build/img/istomina/products/mask.png",
         "url": "#"
       },
       {
-        "name": "Мусс для&nbsp;защиты плотности окрашенных волос, 180&nbsp;ml",
+        "name": "Мусс&nbsp;для&nbsp;защиты&nbsp;плотности окрашенных&nbsp;волос,&nbsp;180&nbsp;ml",
         "img": "build/img/istomina/products/mousse.png",
         "url": "#"
       }

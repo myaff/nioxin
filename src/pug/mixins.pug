@@ -34,3 +34,49 @@ mixin otherGirl(girl)
       .other-girl__name
         .name= girl.name.first
         .family= girl.name.family
+        
+mixin product(product)
+  div&attributes(attributes).product
+    a.product__link(href=product.url, target="_blank")
+      .product__img-wrapper
+        .product__img-bg
+        .product__img: img(src=product.img, alt=product.name)
+      .product__name !{product.name}
+
+mixin expert(expert)
+  div&attributes(attributes).expert
+    .l-container
+      .expert__heading
+        .tp-heading--styled-2
+          .title Комментарий
+          .subtitle= expert.title.rp
+      .expert__content
+        .expert__media
+          .expert__btn
+            .btn.btn--secondary.btn--big= "Задать вопрос " + expert.title.dp
+          .expert__img: img(src=pers.expert.contentImg, alt="")
+        .expert__info
+          .expert__about
+            .expert__photo: img(src=expert.img, alt=expert.name)
+            .expert__about-info
+              .expert__name= expert.name
+              .expert__position !{expert.position}
+            .expert__text !{expert.text}
+
+mixin slider(slider, fullName)
+  .slider
+    .l-container
+      .slider__heading
+        .tp-heading--styled-2
+          .title 30&nbsp;дней
+          .subtitle с&nbsp;nioxin
+      .slider__content
+        .slider__carousel.owl-carousel.carousel--default
+          each slide in slider
+            .slider__item.slide(data-dot=slide.date)
+              .slide__img: img(src=slide.img, alt=fullName)
+              .slide__info
+                .slide__heading
+                  .tp-heading--medium.title !{slide.title}
+                  .tp-subheading--small.subtitle !{slide.note}
+                .slide__text !{slide.text}

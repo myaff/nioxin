@@ -7,9 +7,11 @@ let carouselDefault = $(".owl-carousel.carousel--default");
 let carouselDefaultOptions = {
   items: 1,
   nav: true,
-  navText: ['<svg class="icon"><use xlink:href="#arrow-left"/></svg>', '<svg class="icon"><use xlink:href="#arrow-right"/></svg>'],
+  navText: ['<svg class="icon"><use xlink:href="#prev"/></svg>', '<svg class="icon"><use xlink:href="#next"/></svg>'],
   dots: true,
-  loop: true,
+  dotsData: true,
+  loop: false,
+  stagePadding: 50,
   mouseDrag: false,
   animateOut: 'fadeOut'
 }

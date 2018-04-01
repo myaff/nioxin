@@ -1,0 +1,56 @@
+.slider {
+  padding: 30px 0 0;
+  margin-bottom: -60px;
+  .l-container {
+    padding: 0;
+  }
+  &__heading {
+    max-width: 315px;
+    margin: 0 auto 5rem;
+    
+    .title {
+      color: $white.text;
+    }
+    .subtitle {
+      margin-top: -2.5rem;
+    }
+  }
+  &__carousel {
+    margin: 5rem auto 0;
+  }
+}
+
+.slide {
+  flexy(flex-start, stretch);
+  background: $white.bg;
+  &__img {
+    flex: 0 0 400px;
+    img {
+      display: block;
+    }
+  }
+  &__info {
+    flex: 0 0 700px;
+    padding: 3rem 5rem 5.5rem;
+    flexy(flex-start, flex-start, column, nowrap);
+    max-height: 530px;
+  }
+  
+  &__heading {
+    width: 100%;
+    flex: 0 0 auto;
+    .subtitle {
+      margin-top: 0.75em;
+    }
+  }
+  &__text {
+    flex: 0 1 auto;
+    margin-top: 50px;
+    overflow: auto;
+    
+    a {
+      font: bold italic 23px $font-accent;
+      color: $primary.text;
+    }
+  }
+}

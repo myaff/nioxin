@@ -5,13 +5,14 @@
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
-  padding: 14px 2rem;
-  border: 2px solid transparent;
+  padding: 15px 2rem;
+  border: 1px solid transparent;
   border-radius: 0;
   box-sizing: border-box;
   text-transform: uppercase;
   box-shadow: none;
   transition: all 0.3s;
+  cursor: pointer;
   
   {hover-focus-acitve} {
     outline: 0;
@@ -20,8 +21,11 @@
   // **** sizes ****
   &--small {
     font-size: 15px;
-    padding: 10px 2rem 11px;
+    padding: 11px 2rem 12px;
     min-width: 160px;
+  }
+  &--big {
+    padding: 20px;
   }
   
   // **** themes  ****
@@ -42,9 +46,9 @@
     border-color: transparent;
     
     {hover-focus-active} {
-      color: $white.text;
-      border-color: transparent;
-      background: $black.bg;
+      color: $black.text;
+      border-color: currentColor;
+      background: transparent;
     }
   }
   &--primary-outline {

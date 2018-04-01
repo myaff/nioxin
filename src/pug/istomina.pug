@@ -6,8 +6,37 @@ prepend page
 
 block content
   .page.page--detail.page--istomina
+    - var pers = girls.istomina;
+    - var fullName = pers.name.first + " " + pers.name.family;
+    .girl-info
+      .l-container
+        .dots
+          each i in [1, 2, 3, 4]
+            .dot(class="dot--" + i)
+        .girl-info__content
+          .girl-info__avatar: img(src=pers.avatar, alt=fullName)
+          .girl-info__name= fullName
+          .girl-info__profession= pers.profession.full
+          .girl-info__desc
+            .square-brakets
+              p !{pers.desc}
+          .girl-info__products.products
+            .products__heading.tp-heading--small= "Уход для " + pers.name.rp
+            .products__list
+              each product in pers.products
+                .products__item 
+                  +product(product)
+    +slider(pers.slider, fullName)
+    +expert(pers.expert)
     .other-girls
       .l-container
+        .dots
+          each i in [1, 2, 3, 4, 5]
+            .dot(class="dot--" + i)
+        .other-girls__heading
+          .tp-heading--styled-2
+            .title Другие
+            .subtitle героини
         .other-girls__list
           each girl, index in girls
             if index != currentPage

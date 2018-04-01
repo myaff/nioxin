@@ -1,0 +1,75 @@
+.expert {
+  background: $primary.light;
+  padding: 5rem 0 5.5rem;
+  &__heading {
+    max-width: 530px;
+    margin: 0 auto 2.5rem;
+    
+    .subtitle {
+      margin-right: 4rem;
+      margin-top: -1.5rem;
+    }
+  }
+  
+  &__content {
+    max-width: 980px;
+    margin: 0 auto;
+    flexy(space-between, stretch);
+  }
+  &__btn {
+    absolute(0, -60px, -60px);
+    transform-origin: top left;
+    transform: rotate(-90deg);
+  }
+  &__media {
+    flex: 0 0 410px;
+  }
+  &__img img {
+    display: block;
+  }
+  &__info {
+    flex: 0 0 480px;
+    padding-top: 30px;
+  }
+  &__about {
+    flexy(flex-start, flex-start, column, nowrap);
+    max-height: 500px;
+  }
+  &__photo {
+    absolute(0px);
+    right: 100%;
+    circle(180px);
+  }
+  &__about-info {
+    text-align: center;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    flex: 0 0 auto;
+    
+    &::after {
+      content: '';
+      display: block;
+      circle(10px);
+      absolute(0, 50%, 0px);
+      transform: translateX(-50%);
+      background: $primary.bg;
+    }
+  }
+  &__name {
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+  }
+  &__position {
+    margin: 1em 10%;
+  }
+  
+  &__text {
+    flex: 0 1 auto;
+    overflow: auto;
+    font-size: 1rem;
+    line-height: 23px;
+  }
+}

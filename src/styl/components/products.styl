@@ -37,6 +37,12 @@
     top: 3px;
     transition: all 0.7s linear;
     
+    img {
+      display: block;
+      absolute(0px, 50%);
+      transform: translateX(-50%);
+    }
+    
     .products:hover & {
       width: 100%;
       height: 320px;
@@ -51,9 +57,11 @@
       absolute(0px, 50%);
       transform: translateX(-50%);
       
-      .page--istomina & {
-        background: url('/build/img/istomina/circle.png') center no-repeat;
-        background-size: contain;
+      for $girl in (istomina popova phillipova varapanova) {
+        .page--{$girl} & {
+          background: url('/build/img/' + $girl + '/circle.png') center no-repeat;
+          background-size: contain;
+        }
       }
     }
   }

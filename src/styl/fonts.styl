@@ -1,8 +1,8 @@
 fontPaths($font){
-  src: url($font+'.eot');
-  src: url($font+'.eot#iefix') format("embedded-opentype"),
-       url('#{$fonts-path}'+$font+'.woff') format("woff"),
-       url('#{$fonts-path}'+$font+'.ttf') format("truetype");
+  src: url($fonts-path+$font+'.eot');
+  src: url($fonts-path+$font+'.eot#iefix') format("embedded-opentype"),
+       url($fonts-path+$font+'.woff') format("woff"),
+       url($fonts-path+$font+'.ttf') format("truetype");
 }
 /*
 font_paths($font){

@@ -23,21 +23,21 @@
     "url": "popova.html",
     "text": "Анастасия Попова",
     "img": "/build/img/menu/popova.png",
-    "isActive": false,
+    "isActive": true,
     "isBlank": false
   },
   {
     "url": "phillipova.html",
     "text": "София Филиппова",
     "img": "/build/img/menu/phillipova.png",
-    "isActive": false,
+    "isActive": true,
     "isBlank": false
   },
   {
     "url": "varapanova.html",
     "text": "Юлия Варапанова",
     "img": "/build/img/menu/varapanova.png",
-    "isActive": false,
+    "isActive": true,
     "isBlank": false
   },
   {
@@ -135,7 +135,7 @@
     "url": "popova.html",
     "img": "build/img/girls/popova.jpg",
     "productImg": "build/img/products/color-lock.png",
-    "avatar": "build/img//avatar.png",
+    "avatar": "build/img/popova/avatar.png",
     "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Здесь будет небольшое описание ее образа жизни и связанных с ним проблем с волосами.",
     "products": [
       {
@@ -223,7 +223,7 @@
       },
       {
         "name": "Мусс для&nbsp;защиты плотности окрашенных волос, 180&nbsp;ml",
-        "img": "build/img/phillipova/products/mousse.png",
+        "img": "build/img/phillipova/products/mouse.png",
         "url": "#"
       },
       {
@@ -281,7 +281,7 @@
     "url": "varapanova.html",
     "img": "build/img/girls/varapanova.jpg",
     "productImg": "build/img/products/diaboost.png",
-    "avatar": "build/img//avatar.png",
+    "avatar": "build/img/varapanova/avatar.png",
     "desc": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Здесь будет небольшое описание ее образа жизни и связанных с ним проблем с волосами.",
     "products": [
       {

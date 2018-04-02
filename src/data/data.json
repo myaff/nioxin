@@ -8,42 +8,42 @@
   {
     "url": "https://www.nioxin.com/ru-RU/salonfinder",
     "text": "найти&nbsp;салоны Nioxin",
-    "img": "/build/img/menu/salon-finder.png",
+    "img": "build/img/menu/salon-finder.png",
     "isActive": true,
     "isBlank": true
   },
   {
     "url": "istomina.html",
     "text": "Карина Истомина",
-    "img": "/build/img/menu/istomina.png",
+    "img": "build/img/menu/istomina.png",
     "isActive": true,
     "isBlank": false
   },
   {
     "url": "popova.html",
     "text": "Анастасия Попова",
-    "img": "/build/img/menu/popova.png",
+    "img": "build/img/menu/popova.png",
     "isActive": true,
     "isBlank": false
   },
   {
     "url": "phillipova.html",
     "text": "София Филиппова",
-    "img": "/build/img/menu/phillipova.png",
+    "img": "build/img/menu/phillipova.png",
     "isActive": true,
     "isBlank": false
   },
   {
     "url": "varapanova.html",
     "text": "Юлия Варапанова",
-    "img": "/build/img/menu/varapanova.png",
+    "img": "build/img/menu/varapanova.png",
     "isActive": true,
     "isBlank": false
   },
   {
     "url": "#",
     "text": "больше&nbsp;продуктов Nioxin",
-    "img": "/build/img/menu/more-products.png",
+    "img": "build/img/menu/more-products.png",
     "isActive": true,
     "isBlank": true
   }

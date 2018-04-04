@@ -8,6 +8,22 @@ let Animation = require("./components/animation");
 
 $(document).ready(function(){
   
+  let hosts = {
+    "elle": "nioxin30days.elle.ru",
+    "psy": "nioxin30days.psychologies.ru",
+    "mc": "nioxin30days.marieclaire.ru"
+  };
+  
+  if (window.location.host === hosts.elle) {
+    $('.logo--elle').addClass('is-active');
+  }
+  if (window.location.host === hosts.psy) {
+    $('.logo--psy').addClass('is-active');
+  }
+  if (window.location.host === hosts.mc) {
+    $('.logo--mc').addClass('is-active');
+  }
+  
   DeviceDetection.run();
   Helpers.init();
   Input.init();

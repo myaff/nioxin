@@ -19,7 +19,6 @@ function addClassTogglerController (animationBlocks) {
   let controller = new ScrollMagic.Controller();
   animationBlocks.each(function(){
     let closestContainer = $(this).closest('.l-container').parent()[0];
-    console.dir(closestContainer);
     if (closestContainer.offsetTop < window.outerHeight) {
       $(this).children('[class*="a-"]').css({'transition': 'none'});
       let self = this;

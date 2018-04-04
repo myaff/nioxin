@@ -30,6 +30,9 @@
 }
 
 .logo {
+  &.is-active {
+    display: block;
+  }
   &__text {
     font-size: 11px;
     font-weight: 500;
@@ -38,10 +41,32 @@
   &__icon {
     height: 28px;
   }
-  &--elle &__icon {
-    width: 64px;
+  &--nioxin {
+    margin-right: 0;
+    margin-left: auto;
   }
   &--nioxin &__icon {
     width: 300px;
+  }
+  
+  &--elle {
+    display: none;
+    .logo__icon {
+      width: 64px;
+    }
+  }
+  &--psy {
+    display: none;
+    flex-basis: 320px;
+    .logo__icon {
+      width: 150px;
+    }
+  }
+  &--mc {
+    display: none;
+    flex-basis: 320px;
+    .logo__icon {
+      width: 150px;
+    }
   }
 }

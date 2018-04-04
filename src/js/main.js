@@ -5,6 +5,7 @@ let Input = require("./components/input");
 let Form = require("./components/form");
 let Modal = require("./components/modal");
 let Animation = require("./components/animation");
+let Share = require("./components/share");
 
 $(document).ready(function(){
   
@@ -31,6 +32,7 @@ $(document).ready(function(){
   Carousel.init();
   Modal.init();
   Animation.init();
+  Share.init();
   
 });
 
@@ -47,5 +49,6 @@ module.exports = {
   Form,
   Carousel,
   Modal,
-  Animation
+  Animation,
+  Share
 };

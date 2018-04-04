@@ -5,6 +5,9 @@ block page
     head
       block head
         title Nioxin
+        meta(property="og:title", content="Nioxin30Days")
+        meta(property="og:description", content="Description")
+        meta(property="og:image", content="https://olga-grabko.pro/case/nioxin/build/img/share.jpg")
         //- include parts/favicon
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -12,6 +15,7 @@ block page
         //- link(rel="icon" type="image/png" href="favicons.png" sizes="16x16")
         script(src="build/js/vendor/jquery-3.2.1.min.js")
         script(src="build/img/svg/sprite.js")
+        script(src="https://yastatic.net/share2/share.js",async="async")
     body
       .svg-sprite.l-hidden
       script

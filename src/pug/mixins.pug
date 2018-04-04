@@ -5,10 +5,7 @@ mixin social(isInline, hasTitle)
       .social__title Поделитьcя
     if isInline && hasTitle
       .social__delimiter
-    each item in socials
-      a.social__link(href="#", target="_blank", data-type=item.type)
-        svg.icon.social__icon: use(xlink:href="#" + item.icon)/
-        span.social__text= item.text
+    #share
 
 mixin icon(iconName)
   svg&attributes(attributes).icon: use(xlink:href="#" + iconName)

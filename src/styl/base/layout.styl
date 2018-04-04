@@ -6,6 +6,9 @@ html, body {
   font: normal $font-size-base/1.5 $font-base;
   color: $black.text;
 }
+body {
+  overflow-x: hidden;
+}
 .l-container {
   relative();
   margin-right: auto
@@ -21,7 +24,7 @@ html, body {
 
 .layout {
   min-size($container-widths.min, 100vh);
-  overflow-x: hidden;
+  width: 100vw;
   
   flexy(flex-start, center, nowrap, column);
   > div {

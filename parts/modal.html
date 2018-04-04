@@ -1,0 +1,56 @@
+
+<!-- modal-->
+<div class="modal js-form" id="modal-form">
+  <div class="modal__bg"></div>
+  <div class="modal__window">
+    <div class="modal__close btn btn--plain btn-close-modal js-close-modal">Закрыть</div>
+    <div class="modal__content">
+      <div class="modal-form">
+        <form class="modal-form__form js-form-form">
+          <div class="modal-form__heading">
+            <div class="tp-heading--styled-2">
+              <div class="title">Ваш вопрос</div>
+              <div class="subtitle">эксперту</div>
+            </div>
+          </div>
+          <div class="modal-form__content">
+            <div class="form--inline">
+              <div class="field form__field">
+                <label class="field__label" for="name">
+                  <input class="field__input" id="name" type="text" name="name" required="required"/>
+                  <div class="field__placeholder">Ваше имя</div>
+                </label>
+              </div>
+              <div class="field form__field">
+                <label class="field__label" for="email">
+                  <input class="field__input" id="email" type="email" name="email" required="required"/>
+                  <div class="field__placeholder">E-mail</div>
+                </label>
+              </div>
+            </div>
+            <div class="field form__field">
+              <label class="field__label" for="message">
+                <textarea class="field__input" id="message" name="message" required="required"></textarea>
+                <div class="field__placeholder">Вопрос</div>
+              </label>
+            </div>
+          </div>
+          <div class="modal-form__actions">
+            <div class="btn btn--secondary btn--big js-form-submit">отправить</div>
+          </div>
+        </form>
+        <div class="modal-form__result js-form-result">
+          <div class="modal-form__heading">
+            <div class="tp-heading--styled-2">
+              <div class="title">Спасибо!</div>
+              <div class="subtitle">Ответ на&nbsp;ваш вопрос придет на&nbsp;указанный e&#8209;mail.</div>
+            </div>
+          </div>
+          <div class="modal-form__actions">
+            <div class="btn btn--plain btn-close-modal js-close-modal">Закрыть</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

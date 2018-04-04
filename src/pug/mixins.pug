@@ -55,7 +55,7 @@ mixin expert(expert)
       .expert__content
         .expert__media
           .expert__btn
-            .btn.btn--secondary.btn--big= "Задать вопрос " + expert.title.dp
+            .btn.btn--secondary.btn--big.js-modal(data-target="#modal-form")= "Задать вопрос " + expert.title.dp
           .expert__img: img(src=pers.expert.contentImg, alt="")
         .expert__info
           .expert__about
@@ -63,7 +63,7 @@ mixin expert(expert)
             .expert__about-info
               .expert__name= expert.name
               .expert__position !{expert.position}
-            .expert__text !{expert.text}
+            .expert__text(data-simplebar, data-simplebar-auto-hide="false") !{expert.text}
 
 mixin slider(slider, fullName)
   .slider
@@ -81,4 +81,24 @@ mixin slider(slider, fullName)
                 .slide__heading
                   .tp-heading--medium.title !{slide.title}
                   .tp-subheading--small.subtitle !{slide.note}
-                .slide__text !{slide.text}
+                .slide__text(data-simplebar, data-simplebar-auto-hide="false") !{slide.text}
+
+mixin modal()
+  div&attributes(attributes).modal
+    .modal__bg
+    .modal__window
+      .modal__close.btn.btn--plain.btn-close-modal.js-close-modal Закрыть
+      .modal__content
+        block
+
+mixin fieldInput(inpID, inpPlaceholder)
+  .field.form__field
+    label.field__label(for=inpID)
+      input&attributes(attributes).field__input(id=inpID)
+      .field__placeholder= inpPlaceholder
+
+mixin fieldTextarea(inpID, inpPlaceholder)
+  .field.form__field
+    label.field__label(for=inpID)
+      textarea&attributes(attributes).field__input(id=inpID)
+      .field__placeholder= inpPlaceholder

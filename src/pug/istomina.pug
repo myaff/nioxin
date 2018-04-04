@@ -10,15 +10,15 @@ block content
     - var fullName = pers.name.first + " " + pers.name.family;
     .girl-info
       .l-container
-        .dots
+        .dots.a-scroll-box
           each i in [1, 2, 3, 4]
-            .dot(class="dot--" + i)
+            .dot(class="dot--" + i).a-scale.a-ordered
         .girl-info__content
           .girl-info__avatar: img(src=pers.avatar, alt=fullName)
           .girl-info__name= fullName
           .girl-info__profession= pers.profession.full
-          .girl-info__desc
-            .square-brakets
+          .girl-info__desc.a-scroll-box
+            +squareBrakets()(class="a-expand")
               p !{pers.desc}
           .girl-info__products.products
             .products__heading.tp-heading--small= "Уход для " + pers.name.rp
@@ -30,9 +30,9 @@ block content
     +expert(pers.expert)
     .other-girls
       .l-container
-        .dots
+        .dots.a-scroll-box
           each i in [1, 2, 3, 4, 5]
-            .dot(class="dot--" + i)
+            .dot(class="dot--" + i).a-scale.a-ordered
         .other-girls__heading
           .tp-heading--styled-2
             .title Другие

@@ -150,25 +150,30 @@ p {
 }
 
 .square-brakets {
-  max-width: 780px;
+  width: 780px;
   margin: 1em auto;
   padding: 1.25rem 5rem;
   font: normal 18px/1.56 $font-base;
   text-align: center;
-  &::before,
-  &::after {
-    content: '';
-    display: block;
-    absolute(0px);
-    size(20px, 100%);
-    border: 1px solid currentColor;
-  }
-  &::before {
-    left: 0px;
-    border-right: 0;
-  }
-  &::after {
-    right: 0;
-    border-left: 0;
+  .expander {
+    absolute(0px, 50%);
+    size(100%);
+    transform: translateX(-50%);
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      absolute(0px);
+      size(20px, 100%);
+      border: 1px solid currentColor;
+    }
+    &::before {
+      left: 0px;
+      border-right: 0;
+    }
+    &::after {
+      right: 0;
+      border-left: 0;
+    }
   }
 }

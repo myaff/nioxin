@@ -102,3 +102,9 @@ mixin fieldTextarea(inpID, inpPlaceholder)
     label.field__label(for=inpID)
       textarea&attributes(attributes).field__input(id=inpID)
       .field__placeholder= inpPlaceholder
+
+mixin squareBrakets(contentText)
+  div&attributes(attributes).square-brakets
+    .expander
+    .content
+      block

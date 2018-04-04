@@ -63,7 +63,7 @@ mixin expert(expert)
             .expert__about-info
               .expert__name= expert.name
               .expert__position !{expert.position}
-            .expert__text(data-simplebar, data-simplebar-auto-hide="false") !{expert.text}
+            .expert__text.mCustomScrollbar(data-mcs-theme="rounded-dark") !{expert.text}
 
 mixin slider(slider, fullName)
   .slider
@@ -81,7 +81,7 @@ mixin slider(slider, fullName)
                 .slide__heading
                   .tp-heading--medium.title !{slide.title}
                   .tp-subheading--small.subtitle !{slide.note}
-                .slide__text(data-simplebar, data-simplebar-auto-hide="false") !{slide.text}
+                .slide__text.mCustomScrollbar(data-mcs-theme="rounded-dark") !{slide.text}
 
 mixin modal()
   div&attributes(attributes).modal

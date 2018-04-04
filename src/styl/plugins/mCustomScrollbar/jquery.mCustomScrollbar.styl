@@ -77,7 +77,7 @@ y-axis
 
 .mCSB_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
   position: absolute;
-  width: 16px;
+  width: 20px;
   height: auto;
   left: auto;
   top: 0;
@@ -113,7 +113,7 @@ y-axis
 }
 
 .mCSB_scrollTools .mCSB_draggerRail{
-  width: 2px;
+  width: 5px;
   height: 100%;
   margin: 0 auto;
   border-radius: 16px;
@@ -131,7 +131,7 @@ y-axis
   width: 4px;
   height: 100%;
   margin: 0 auto;
-  -webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
+  border-radius: 16px;
   text-align: center;
 }
 
@@ -367,11 +367,12 @@ yx-axis
 */
 
 /* default theme ("light") */
-
+/*
 .mCSB_scrollTools{ 
   opacity: 0.75; 
   filter: "alpha(opacity=75)";
 }
+*/
 
 .mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,
 .mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools{ 
@@ -792,31 +793,38 @@ yx-axis
 
 /* theme "rounded", "rounded-dark", "rounded-dots", "rounded-dots-dark" */
 
-.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(255,255,255,0.15); }
+.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail{
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.15);
+}
 
 .mCS-rounded.mCSB_scrollTools .mCSB_dragger, 
 .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger, 
 .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger, 
-.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger{ height: 14px; }
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger{
+  height: 20px;
+}
 
 .mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
 .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
 .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
 .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-  width: 14px;
-  margin: 0 1px;
+  width: 20px;
+  margin: 0;
 }
 
 .mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger, 
 .mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger, 
 .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger, 
-.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 14px; }
+.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger{
+  width: 20px;
+}
 
 .mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
 .mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
 .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
 .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
-  height: 14px;
+  height: 20px;
   margin: 1px 0;
 }
 
@@ -824,22 +832,24 @@ yx-axis
 .mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar, 
 .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
 .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{
-  width: 16px; /* auto-expanded scrollbar */
-  height: 16px;
+  width: 20px; /* auto-expanded scrollbar */
+  height: 20px;
   margin: -1px 0;
 }
 
 .mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
 .mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, 
 .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
-.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width: 4px; /* auto-expanded scrollbar */ }
+.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{
+  width: 5px; /* auto-expanded scrollbar */
+}
 
 .mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
 .mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar, 
 .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
 .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{
-  height: 16px; /* auto-expanded scrollbar */
-  width: 16px;
+  height: 20px; /* auto-expanded scrollbar */
+  width: 20px;
   margin: 0 -1px;
 }
 
@@ -847,7 +857,7 @@ yx-axis
 .mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, 
 .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
 .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{
-  height: 4px; /* auto-expanded scrollbar */
+  height: 5px; /* auto-expanded scrollbar */
   margin: 6px 0;
 }
 
@@ -872,27 +882,23 @@ yx-axis
 
 .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
 .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-  background-color: #000;
-  background-color: rgba(0,0,0,0.75);
+  background-color: $black.text;
 }
 
 .mCS-rounded-dark.mCSB_scrollTools .mCSB_draggerRail{
-  background-color: #000;
-  background-color: rgba(0,0,0,0.15);
+  background-color: $primary.bg;
 }
 
 .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
 .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
-  background-color: #000;
-  background-color: rgba(0,0,0,0.85);
+  background-color: $black.text;
 }
 
 .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
 .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, 
 .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
 .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
-  background-color: #000;
-  background-color: rgba(0,0,0,0.9);
+  background-color: $black.text;
 }
 
 .mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonUp{

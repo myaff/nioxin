@@ -24,7 +24,7 @@ function init() {
       title: 'Nioxin30Days',
       description: "",
       //image: 'build/img/share.jpg'
-      image: 'https://olga-grabko.pro/case/nioxin/build/img/share.jpg'
+      image: 'http://nioxin30days.elle.ru/build/img/share.jpg'
     },
     theme: {
       services: 'vkontakte,facebook,twitter',

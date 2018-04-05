@@ -41,11 +41,11 @@
     "isBlank": false
   },
   {
-    "url": "#",
-    "text": "больше&nbsp;продуктов Nioxin",
+    "url": "/",
+    "text": "Главная<br>страница",
     "img": "build/img/menu/more-products.png",
     "isActive": true,
-    "isBlank": true
+    "isBlank": false
   }
 ],
 "girls": {

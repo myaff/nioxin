@@ -1,0 +1,105 @@
+//- social
+mixin social(isInline, hasTitle)
+  .social(class=isInline ? "social--inline" : '')
+    if hasTitle
+      .social__title Поделитьcя
+    if isInline && hasTitle
+      .social__delimiter
+    #share
+
+mixin icon(iconName)
+  svg&attributes(attributes).icon: use(xlink:href="#" + iconName)
+
+mixin allGirl(girl)
+  div&attributes(attributes).all-girl
+    a.all-girl__link(href=girl.url)
+      .all-girl__media
+        .all-girl__img: img(src="../" + girl.img, alt=girl.name.first + ' ' + girl.name.family)
+        .all-girl__product: img(src="../" + girl.productImg, alt="")
+      .all-girl__info
+        .all-girl__name
+          .name= girl.name.first
+          .family= girl.name.family
+        .all-girl__profession= girl.profession.short
+
+mixin otherGirl(girl)
+  div&attributes(attributes).other-girl
+    a.other-girl__link(href=girl.url)
+      .other-girl__img: img(src="../" + girl.avatar, alt=girl.name.first + ' ' + girl.name.family)
+      .other-girl__name
+        .name= girl.name.first
+        .family= girl.name.family
+        
+mixin product(product)
+  div&attributes(attributes).product
+    a.product__link(href=product.url, target="_blank")
+      .product__img-wrapper
+        .product__img-bg
+        .product__img: img(src="../" + product.img, alt=product.name)
+      .product__name !{product.name}
+
+mixin expert(expert)
+  div&attributes(attributes).expert
+    .l-container
+      .expert__salons-btn.mx-auto.my-5
+        a.btn.btn--secondary(href="https://www.nioxin.com/ru-RU/salonfinder", target="_blank") Найти салоны Nioxin
+      .expert__heading
+        .tp-heading--styled-2
+          .title Комментарий
+          .subtitle= expert.title.rp
+      .expert__content
+        .expert__media
+          .expert__img: img(src="../" + pers.expert.contentImg, alt="")
+        .expert__info
+          .expert__about
+            .expert__about-info
+              .expert__name= expert.name
+              .expert__position !{expert.position}
+            .expert__photo: img(src="../" + expert.img, alt=expert.name)
+      .expert__text !{expert.text}
+      .expert__btn
+        .btn.btn--primary.btn--big.js-modal(data-target="#modal-form")= "Задать вопрос " + expert.title.dp
+
+mixin slider(slider, fullName)
+  .slider
+    .l-container
+      .slider__heading
+        .tp-heading--styled-2
+          .title 30&nbsp;дней
+          .subtitle с&nbsp;nioxin
+      .slider__content
+        .slider__carousel.owl-carousel.carousel--default
+          each slide in slider
+            .slider__item.slide(data-dot=slide.date)
+              .slide__img: img(src="../" + slide.img, alt=fullName)
+              .slide__info
+                .slide__heading
+                  .tp-heading--medium.title !{slide.title}
+                  .tp-subheading--small.subtitle !{slide.note}
+              .slide__text.mCustomScrollbar(data-mcs-theme="rounded-dark") !{slide.text}
+
+mixin modal()
+  div&attributes(attributes).modal
+    .modal__bg
+    .modal__window
+      .modal__close.btn.btn--plain.btn-close-modal.js-close-modal Закрыть
+      .modal__content
+        block
+
+mixin fieldInput(inpID, inpPlaceholder)
+  .field.form__field
+    label.field__label(for=inpID)
+      input&attributes(attributes).field__input(id=inpID)
+      .field__placeholder= inpPlaceholder
+
+mixin fieldTextarea(inpID, inpPlaceholder)
+  .field.form__field
+    label.field__label(for=inpID)
+      textarea&attributes(attributes).field__input(id=inpID)
+      .field__placeholder= inpPlaceholder
+
+mixin squareBrakets(contentText)
+  div&attributes(attributes).square-brakets
+    .expander
+    .content
+      block

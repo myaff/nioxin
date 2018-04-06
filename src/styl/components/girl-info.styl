@@ -1,17 +1,28 @@
 .girl-info {
-  padding: 0 0 100px;
-  background: url('../img/bg-1.jpg') top 70px center no-repeat;
+  @media $desktop {
+    padding: 0 0 100px;
+    background: url('../img/bg-1.jpg') top 70px center no-repeat;
+  }
+  @media $mobile {
+    background: $white.bg;
+  }
   &__content {
     max-width: 1100px;
     margin: 0 auto;
     background: $white.bg;
     text-align: center;
     padding: 190px 0 1.25rem;
+    @media $mobile {
+      padding: 120px 0 0;
+    }
   }
   &__avatar {
     circle(300px);
     absolute(-130px, 50%);
     transform: translateX(-50%);
+    @media $mobile {
+      top: -190px;
+    }
     
     img {
       display: block;

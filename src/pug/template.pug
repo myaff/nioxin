@@ -13,6 +13,7 @@ block page
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(href="build/css/main.css", rel="stylesheet")
         link(rel="icon" type="image/png" href="favicons.png" sizes="16x16")
+        script(src="build/js/vendor/mobile.js")
         script(src="build/js/vendor/jquery-3.2.1.min.js")
         script(src="build/img/svg/sprite.js")
         script(src="https://yastatic.net/share2/share.js",async="async")
@@ -20,7 +21,7 @@ block page
       .svg-sprite.l-hidden
       script
         | $('.svg-sprite').html(SVG_SPRITE);
-      .layout(class="layout--" + layout)
+      .layout.layout--desktop(class="layout--" + layout)
         include parts/header
         block content
         include parts/footer

@@ -1,0 +1,7 @@
+nav.main-nav
+  ul.main-nav__list
+    each page in pages
+      li.main-nav__item
+        a.main-nav__link(href=page.url, class=page.isActive ? "" : "disabled", target= page.isBlank ? "_blank" : "")
+          .main-nav__img: img(src="../" + page.img)
+          .main-nav__text !{page.text}

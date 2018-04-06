@@ -4,6 +4,10 @@
       absolute(50%, 0px);
       flexy(space-between, center);
       width: 100%;
+      @media $mobile {
+        justify-content: flex-end;
+        top: 340px;
+      }
     }
     .owl-prev,
     .owl-next {
@@ -23,11 +27,21 @@
         color: $primary.light;
       }
     }
+    .owl-prev {
+      @media $mobile {
+        display: none;
+      }
+    }
     .owl-dots {
       absolute();
       bottom: 100%;
       right: 120px;
       flexy(flex-end, flex-end);
+      @media $mobile {
+        top: 0;
+        bottom: auto;
+        right: 0;
+      }
     }
     .owl-dot {
       size(80px, 30px);
@@ -38,6 +52,10 @@
       color: $black.text;
       padding: 7px;
       text-align: center;
+      @media $mobile {
+        height: 50px;
+        padding: 17px 7px;
+      }
       
       &:hover,
       &.active {

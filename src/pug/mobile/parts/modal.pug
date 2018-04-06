@@ -1,0 +1,23 @@
+include ../mixins
+// modal
++modal()(id="modal-form", class="js-form")
+  .modal-form
+    form.modal-form__form.js-form-form
+      .modal-form__heading
+        .tp-heading--styled-2
+          .title Ваш вопрос
+          .subtitle эксперту
+      .modal-form__content
+        .form--inline
+          +fieldInput("name", "Ваше имя")(type="text", name="name", required)
+          +fieldInput("email", "E-mail")(type="email", name="email", required)
+        +fieldTextarea("message", "Вопрос")(name="message", required)
+      .modal-form__actions
+        .btn.btn--secondary.btn--big.js-form-submit отправить
+    .modal-form__result.js-form-result
+      .modal-form__heading
+        .tp-heading--styled-2
+          .title Спасибо!
+          .subtitle Ответ на&nbsp;ваш вопрос придет на&nbsp;указанный e&#8209;mail.
+      .modal-form__actions
+        .btn.btn--plain.btn-close-modal.js-close-modal Закрыть

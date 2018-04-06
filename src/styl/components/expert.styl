@@ -1,6 +1,9 @@
 .expert {
   background: $primary.light;
   padding: 5rem 0 5.5rem;
+  @media $mobile {
+    padding: 60px 0 40px;
+  }
   &__salons-btn {
     text-align: center;
   }
@@ -18,14 +21,25 @@
     max-width: 980px;
     margin: 0 auto;
     flexy(space-between, stretch);
+    @media $mobile {
+      justify-content: center;
+    }
   }
   &__btn {
-    absolute(0, -60px, -60px);
-    transform-origin: top left;
-    transform: rotate(-90deg);
+    @media $desktop {
+      absolute(0, -60px, -60px);
+      transform-origin: top left;
+      transform: rotate(-90deg);
+    }
+    @media $mobile {
+      text-align: center;
+    }
   }
   &__media {
     flex: 0 0 410px;
+    @media $mobile {
+      flex-basis: 400px;
+    }
   }
   &__img img {
     display: block;
@@ -33,15 +47,27 @@
   &__info {
     flex: 0 0 480px;
     padding-top: 30px;
+    @media $mobile {
+      flex-basis: 380px;
+      padding-top: 40px;
+      margin-left: -150px;
+    }
   }
   &__about {
-    flexy(flex-start, flex-start, column, nowrap);
-    height: 500px;
+    @media $desktop {
+      flexy(flex-start, flex-start, column, nowrap);
+      height: 500px;
+    }
   }
   &__photo {
-    absolute(0px);
-    right: 100%;
     circle(180px);
+    @media $desktop {
+      absolute(0px);
+      right: 100%;
+    }
+    @media $mobile {
+      margin: 30px auto;
+    }
   }
   &__about-info {
     text-align: center;
@@ -68,6 +94,9 @@
   }
   &__position {
     margin: 1em 10%;
+    @media $mobile {
+      margin-bottom: 0;
+    }
   }
   
   &__text {
@@ -76,5 +105,10 @@
     overflow-y: auto;
     font-size: 1rem;
     line-height: 23px;
+    @media $mobile {
+      margin: 40px 0;
+      font-size: 18px;
+      line-height: 1.4;
+    }
   }
 }

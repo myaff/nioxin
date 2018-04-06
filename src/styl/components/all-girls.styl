@@ -11,19 +11,41 @@
     flex: 0 0 25%;
   }
   
+  &__carousel {
+    margin: 0 ($grid-gutter  * -1);
+    width: auto;
+    .owl-stage-outer {
+      padding: 20px;
+    }
+  }
+  &__carousel &__item {
+    width: 460px;
+    padding: 0;
+  }
+  
   &__text {
     padding: 2rem 0 3rem;
   }
 }
 
 .all-girl {
+  @media $mobile {
+    background: $white.text;
+    padding-bottom: 2.5rem;
+  }
   &__media {
     size(100%, 450px);
     background: $white.text;
+    @media $mobile {
+      height: 510px;
+    }
   }
   &__info {
     margin-top: 1.25rem;
     text-align: center;
+    @media $mobile {
+      margin-top: 30px;
+    }
   }
   &__product {
     absolute();
@@ -34,28 +56,54 @@
       max-size(100%);
       object-fit: contain;
     }
-    ^[0]:hover & {
-      opacity: 0;
+    @media $desktop {
+      ^[0]:hover & {
+        opacity: 0;
+      }
     }
     ^[0]--istomina & {
-      bottom: 0px;
-      left: 25px;
-      animation: prod-1 10s infinite;
+      @media $desktop {
+        bottom: 0px;
+        left: 25px;
+        animation: prod-1 10s infinite;
+      }
+      @media $mobile {
+        top: -10px;
+        right: 20px;
+      }
     }
     ^[0]--popova & {
-      top: -50px;
-      right: 25px;
-      animation: prod-2 12s infinite;
+      @media $desktop {
+        top: -50px;
+        right: 25px;
+        animation: prod-2 12s infinite;
+      }
+      @media $mobile {
+        bottom: 20px;
+        left: 30px;
+      }
     }
     ^[0]--phillipova & {
       bottom: 45px;
       right: -20px;
-      animation: prod-3 10s infinite;
+      @media $desktop {
+        animation: prod-3 10s infinite;
+      }
+      @media $mobile {
+        bottom: -5px;
+        right: 10px;
+      }
     }
     ^[0]--varapanova & {
-      bottom: -20px;
       left: 40px;
-      animation: prod-4 12s infinite;
+      @media $desktop {
+        bottom: -20px;
+        animation: prod-4 12s infinite;
+      }
+      @media $mobile {
+        top: 50px;
+        left: 20px;
+      }
     }
   }
   &__link {
@@ -70,24 +118,54 @@
       opacity: 1;
       z-index: 2;
     }
+    @media $mobile {
+      z-index: 2;
+      display: block;
+      relative();
+      bottom: 0;
+      right: 0;
+      size(100%);
+      opacity: 1;
+      color: $black.text;
+      &:hover {
+        color: $black.text;
+      }
+    }
   }
   &__name {
     font-size: 20px;
     line-height: 1.15;
     font-weight: bold;
     text-transform: uppercase;
+    @media $mobile {
+      font-size: 30px;
+      flexy(center, center);
+      > div {
+        margin: 0 5px;
+      }
+    }
   }
   &__profession {
     font-size: 15px;
     margin-top: 0.5em;
+    @media $mobile {
+      font-size: 20px;
+    }
   }
   
   &__img {
     height: 100%;
     filter: grayscale(1);
     transition: filter 0.2s;
+    @media $mobile {
+      overflow: hidden;
+    }
     img {
       display: block;
+      @media $mobile {
+        size(100%, auto);
+        object-fit: contain;
+      }
     }
     ^[0]:hover & {
       filter: grayscale(0)
@@ -95,16 +173,30 @@
     ^[0]--istomina & {
       padding-top: 20px;
       flexy(flex-end, flex-start);
+      @media $mobile {
+        padding: 30px 0 0 60px;
+      }
     }
     ^[0]--popova & {
       flexy(center, flex-start);
+      @media $mobile {
+        padding: 0 20px;
+      }
     }
     ^[0]--phillipova & {
       padding-top: 20px;
       flexy(flex-start, flex-start);
+      @media $mobile {
+        padding: 10px 80px 0 0;
+      }
     }
     ^[0]--varapanova & {
       flexy(flex-end, center);
+      @media $mobile {
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 60px 60px 0 0;
+      }
     }
   }
   

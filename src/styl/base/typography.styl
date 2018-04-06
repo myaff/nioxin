@@ -59,6 +59,25 @@ a {
       margin-top: -2rem;
     }
   }
+  &--styled-3 {
+    .title {
+      font: italic 500 190px/0.5 $font-accent;
+      color: $white.text;
+      text-align: left;
+    }
+    .title-2 {
+      font: italic 500 108px/1 $font-accent;
+      color: $white.text;
+      text-align: right;
+    }
+    .subtitle {
+      font: 300 30px/1.33 $font-base;
+      color: $white.text;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 2rem;
+    }
+  }
   &--medium {
     font: italic 500 38px/1 $font-accent;
   }
@@ -155,6 +174,10 @@ p {
   padding: 1.25rem 5rem;
   font: normal 18px/1.56 $font-base;
   text-align: center;
+  @media $mobile {
+    width: 100%;
+    padding: 1.25rem 4rem;
+  }
   .expander {
     absolute(0px, 50%);
     size(100%);

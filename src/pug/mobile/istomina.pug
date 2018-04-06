@@ -1,0 +1,38 @@
+extends template
+
+prepend page
+  - var layout = 'detail';
+  - var currentPage = 'istomina';
+
+block content
+  .page.page--detail.page--istomina
+    - var pers = girls.istomina;
+    - var fullName = pers.name.first + " " + pers.name.family;
+    .girl-info
+      .l-container
+        .girl-info__content
+          .girl-info__avatar: img(src="../" + pers.avatar, alt=fullName)
+          .girl-info__name= fullName
+          .girl-info__profession= pers.profession.full
+          .girl-info__desc.a-scroll-box
+            +squareBrakets()
+              p !{pers.desc}
+          .girl-info__products.products
+            .products__heading.tp-heading--small= "Уход для " + pers.name.rp
+            .products__list
+              each product in pers.products
+                .products__item 
+                  +product(product)
+    +slider(pers.slider, fullName)
+    +expert(pers.expert)
+    .other-girls
+      .l-container
+        .other-girls__heading
+          .tp-heading--styled-2
+            .title Другие
+            .subtitle героини
+        .other-girls__list
+          each girl, index in girls
+            if index != currentPage
+              .other-girls__item
+                +otherGirl(girl)

@@ -5,3 +5,4 @@ nav.main-nav
         a.main-nav__link(href=page.url, class=page.isActive ? "" : "disabled", target= page.isBlank ? "_blank" : "")
           .main-nav__img: img(src="../" + page.img)
           .main-nav__text !{page.text}
+  +social(true, false)

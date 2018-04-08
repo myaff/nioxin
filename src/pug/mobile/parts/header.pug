@@ -1,19 +1,24 @@
 include ../mixins
 // header
 .header
-  .l-container
-    .header__content
-      .header__btn-menu
-        .btn-menu
-          .btn-menu__text Закрыть
-      .header__logo.logo.logo--elle
-        span.logo__text Специальный проект
-        +icon('elle')(class="logo__icon ml-3")
-      .header__logo.logo.logo--psy
-        span.logo__text Специальный проект
-        +icon('psy')(class="logo__icon ml-3")
-      .header__logo.logo.logo--mc
-        span.logo__text Специальный проект
-        +icon('marie-claire')(class="logo__icon ml-3")
-    .header__menu
-      include ../components/main-nav
+  .header__content-wrapper
+    .l-container
+      .header__content
+        .header__btn-menu
+          .btn-menu
+            .btn-menu__text Закрыть
+        .header__logo.logo.logo--elle
+          span.logo__text Специальный проект
+          +icon('elle')(class="logo__icon ml-3")
+        .header__logo.logo.logo--psy
+          span.logo__text Специальный проект
+          +icon('psy')(class="logo__icon ml-3")
+        .header__logo.logo.logo--mc
+          span.logo__text Специальный проект
+          +icon('marie-claire')(class="logo__icon ml-3")
+        .header__logo.logo.logo--nioxin
+          +icon('nioxin')(class="logo__icon")
+  .header__menu-wrapper
+    .l-container
+      .header__menu
+        include ../components/main-nav

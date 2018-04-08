@@ -17,6 +17,9 @@
       color: $primary.light;
       text-decoration: none;
     }
+    @media $mobile {
+      font-size: 5rem;
+    }
   }
   &__link + &__link {
     margin-left: 2rem;
@@ -25,6 +28,9 @@
   &__text {
     font: normal 15px/1 $font-base;
     text-transform: lowercase;
+    @media $mobile {
+      display: none;
+    }
   }
   
   &__text,
@@ -66,6 +72,9 @@
   
   &__item {
     display: block;
+    @media $mobile {
+      margin: 0 1rem;
+    }
   }
   &__link {
     font-size: 1.25rem;
@@ -77,7 +86,9 @@
       color: $primary.light;
       text-decoration: none;
     }
-    
+    @media $mobile {
+      font-size: 4rem;
+    }
   }
   &__item + &__item {
     margin-left: 2rem;
@@ -86,6 +97,9 @@
   &__title {
     font: normal 15px/1 $font-base;
     text-transform: lowercase;
+    @media $mobile {
+      display: none;
+    }
   }
   
   &__title,

@@ -18,6 +18,13 @@
     padding: 0;
     @media $mobile {
       margin: 0 60px 30px;
+      
+      &:first-of-type {
+        order: 2;
+      }
+      &:last-of-type {
+        order: 3;
+      }
     }
   }
   &__link {

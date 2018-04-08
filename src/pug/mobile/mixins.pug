@@ -38,7 +38,7 @@ mixin product(product)
         .product__img: img(src="../" + product.img, alt=product.name)
       .product__name !{product.name}
 
-mixin expert(expert)
+mixin expert(expert, imgPosition)
   div&attributes(attributes).expert
     .l-container
       .expert__salons-btn.mx-auto.my-5
@@ -49,13 +49,16 @@ mixin expert(expert)
           .subtitle= expert.title.rp
       .expert__content
         .expert__media
-          .expert__img: img(src="../" + pers.expert.contentImg, alt="")
+          .expert__img: img(src="../" + pers.expert.contentImgMobile, alt="")
         .expert__info
           .expert__about
+            if imgPosition == 'top'
+              .expert__photo: img(src="../" + expert.img, alt=expert.name)
             .expert__about-info
               .expert__name= expert.name
               .expert__position !{expert.position}
-            .expert__photo: img(src="../" + expert.img, alt=expert.name)
+            if imgPosition == 'bottom'
+              .expert__photo: img(src="../" + expert.img, alt=expert.name)
       .expert__text !{expert.text}
       .expert__btn
         .btn.btn--primary.btn--big.js-modal(data-target="#modal-form")= "Задать вопрос " + expert.title.dp
@@ -77,6 +80,8 @@ mixin slider(slider, fullName)
                   .tp-heading--medium.title !{slide.title}
                   .tp-subheading--small.subtitle !{slide.note}
               .slide__text.mCustomScrollbar(data-mcs-theme="rounded-dark") !{slide.text}
+        .owl-dots.owl-dots--top
+        .owl-dots.owl-dots--bottom
 
 mixin modal()
   div&attributes(attributes).modal

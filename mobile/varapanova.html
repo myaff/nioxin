@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="favicons.png" sizes="16x16">
     <script src="../build/js/vendor/jquery-3.2.1.min.js"></script>
     <script src="../build/img/svg/sprite.js"></script>
-    <script src="https://yastatic.net/share2/share.js" async="async"></script>
+    <script src="https://yastatic.net/share2/share.js"></script>
   </head>
   <body>
     <div class="svg-sprite l-hidden"></div>
@@ -19,52 +19,66 @@
     <div class="layout layout--mobile layout--detail">
       <!-- header-->
       <div class="header">
-        <div class="l-container">
-          <div class="header__content">
-            <div class="header__btn-menu">
-              <div class="btn-menu">
-                <div class="btn-menu__text">Закрыть</div>
+        <div class="header__content-wrapper">
+          <div class="l-container">
+            <div class="header__content">
+              <div class="header__btn-menu">
+                <div class="btn-menu">
+                  <div class="btn-menu__text">Закрыть</div>
+                </div>
+              </div>
+              <div class="header__logo logo logo--elle"><span class="logo__text">Специальный проект</span>
+                      <svg class="icon logo__icon ml-3">
+                        <use xlink:href="#elle"></use>
+                      </svg>
+              </div>
+              <div class="header__logo logo logo--psy"><span class="logo__text">Специальный проект</span>
+                      <svg class="icon logo__icon ml-3">
+                        <use xlink:href="#psy"></use>
+                      </svg>
+              </div>
+              <div class="header__logo logo logo--mc"><span class="logo__text">Специальный проект</span>
+                      <svg class="icon logo__icon ml-3">
+                        <use xlink:href="#marie-claire"></use>
+                      </svg>
+              </div>
+              <div class="header__logo logo logo--nioxin">
+                      <svg class="icon logo__icon">
+                        <use xlink:href="#nioxin"></use>
+                      </svg>
               </div>
             </div>
-            <div class="header__logo logo logo--elle"><span class="logo__text">Специальный проект</span>
-                    <svg class="icon logo__icon ml-3">
-                      <use xlink:href="#elle"></use>
-                    </svg>
-            </div>
-            <div class="header__logo logo logo--psy"><span class="logo__text">Специальный проект</span>
-                    <svg class="icon logo__icon ml-3">
-                      <use xlink:href="#psy"></use>
-                    </svg>
-            </div>
-            <div class="header__logo logo logo--mc"><span class="logo__text">Специальный проект</span>
-                    <svg class="icon logo__icon ml-3">
-                      <use xlink:href="#marie-claire"></use>
-                    </svg>
-            </div>
           </div>
-          <div class="header__menu">
-            <nav class="main-nav">
-              <ul class="main-nav__list">
-                <li class="main-nav__item"><a class="main-nav__link" href="https://www.nioxin.com/ru-RU/salonfinder" target="_blank">
-                    <div class="main-nav__img"><img src="../build/img/menu/salon-finder.png"></div>
-                    <div class="main-nav__text">найти&nbsp;салоны Nioxin</div></a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="istomina.html" target="">
-                    <div class="main-nav__img"><img src="../build/img/menu/istomina.png"></div>
-                    <div class="main-nav__text">Карина Истомина</div></a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="popova.html" target="">
-                    <div class="main-nav__img"><img src="../build/img/menu/popova.png"></div>
-                    <div class="main-nav__text">Анастасия Попова</div></a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="phillipova.html" target="">
-                    <div class="main-nav__img"><img src="../build/img/menu/phillipova.png"></div>
-                    <div class="main-nav__text">София Филиппова</div></a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="varapanova.html" target="">
-                    <div class="main-nav__img"><img src="../build/img/menu/varapanova.png"></div>
-                    <div class="main-nav__text">Юлия Варапанова</div></a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="/" target="">
-                    <div class="main-nav__img"><img src="../build/img/menu/more-products.png"></div>
-                    <div class="main-nav__text">Главная<br>страница</div></a></li>
-              </ul>
-            </nav>
+        </div>
+        <div class="header__menu-wrapper">
+          <div class="l-container">
+            <div class="header__menu">
+              <nav class="main-nav">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item"><a class="main-nav__link" href="https://www.nioxin.com/ru-RU/salonfinder" target="_blank">
+                      <div class="main-nav__img"><img src="../build/img/menu/salon-finder.png"></div>
+                      <div class="main-nav__text">найти&nbsp;салоны Nioxin</div></a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="istomina.html" target="">
+                      <div class="main-nav__img"><img src="../build/img/menu/istomina.png"></div>
+                      <div class="main-nav__text">Карина Истомина</div></a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="popova.html" target="">
+                      <div class="main-nav__img"><img src="../build/img/menu/popova.png"></div>
+                      <div class="main-nav__text">Анастасия Попова</div></a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="phillipova.html" target="">
+                      <div class="main-nav__img"><img src="../build/img/menu/phillipova.png"></div>
+                      <div class="main-nav__text">София Филиппова</div></a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="varapanova.html" target="">
+                      <div class="main-nav__img"><img src="../build/img/menu/varapanova.png"></div>
+                      <div class="main-nav__text">Юлия Варапанова</div></a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="/" target="">
+                      <div class="main-nav__img"><img src="../build/img/menu/more-products.png"></div>
+                      <div class="main-nav__text">Главная<br>страница</div></a></li>
+                </ul>
+                      <div class="social social--inline">
+                        <div id="share"></div>
+                      </div>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
@@ -174,6 +188,8 @@
                         <div class="slide__text mCustomScrollbar" data-mcs-theme="rounded-dark"><p>Девочки, ну&nbsp;всё, весна, кажется, наконец-то наступила! И&nbsp;пусть солнца пока не&nbsp;много, зато днём вроде температура обещает больше не&nbsp;опускаться ниже нуля. А&nbsp;значит, уже совсем скоро можно будет выходить на&nbsp;прогулку с&nbsp;Артемкой без шапки (только мне, конечно☝) . А&nbsp;что особенно приятно, волосы, как мне кажется, тоже готовы предстать во&nbsp;всей красе. Обещала поделиться впечатлениями&nbsp;&mdash; рассказываю. Хочу прям отдать должное трехступенчатой системе <a hre='#' target='_blank'>@nioxin</a>, без которой я&nbsp;уже не&nbsp;могу представить свои банные процедуры.</p><p>Челлендж <a hre='#' target='_blank'>#nioxin30days</a> не&nbsp;прошел зря: во-первых, волосы стали крепче (теперь их&nbsp;почти не&nbsp;остаётся на&nbsp;расческе или на&nbsp;подушке, а&nbsp;я&nbsp;знаю, многих это тоже беспокоит), а&nbsp;во-вторых, по&nbsp;ощущениям моя &laquo;копна&raquo; стала гуще и&nbsp;объемнее, и&nbsp;наконец полез подпушек.</p></div>
                       </div>
                     </div>
+                    <div class="owl-dots owl-dots--top"></div>
+                    <div class="owl-dots owl-dots--bottom"></div>
                   </div>
                 </div>
               </div>
@@ -188,15 +204,15 @@
                   </div>
                   <div class="expert__content">
                     <div class="expert__media">
-                      <div class="expert__img"><img src="../build/img/varapanova/expert-img.jpg" alt=""></div>
+                      <div class="expert__img"><img src="../build/img/varapanova/expert-img-mobile.jpg" alt=""></div>
                     </div>
                     <div class="expert__info">
                       <div class="expert__about">
+                        <div class="expert__photo"><img src="../build/img/varapanova/expert.png" alt="Мария Тихонова"></div>
                         <div class="expert__about-info">
                           <div class="expert__name">Мария Тихонова</div>
                           <div class="expert__position">Психотерапевт, специализируется на&nbsp;семейном консультировании.</div>
                         </div>
-                        <div class="expert__photo"><img src="../build/img/varapanova/expert.png" alt="Мария Тихонова"></div>
                       </div>
                     </div>
                   </div>

@@ -151,6 +151,14 @@ function init(){
     $(this).toggleClass('is-open');
     $('.header').toggleClass('is-open');
     $('.main-nav').slideToggle(500);
+    if (Main.DeviceDetection.isMobileVersion()) {
+      if ($('.header').hasClass('is-open')) {
+        console.log('is-open');
+        $('html, body').css('overflow-y', 'hidden');
+      } else {
+        $('html, body').css('overflow-y', '');
+      }
+    }
   });
   
 }

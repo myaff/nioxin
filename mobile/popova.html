@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="favicons.png" sizes="16x16">
     <script src="../build/js/vendor/jquery-3.2.1.min.js"></script>
     <script src="../build/img/svg/sprite.js"></script>
-    <script src="https://yastatic.net/share2/share.js" async="async"></script>
+    <script src="https://yastatic.net/share2/share.js"></script>
   </head>
   <body>
     <div class="svg-sprite l-hidden"></div>
@@ -19,52 +19,66 @@
     <div class="layout layout--mobile layout--detail">
       <!-- header-->
       <div class="header">
-        <div class="l-container">
-          <div class="header__content">
-            <div class="header__btn-menu">
-              <div class="btn-menu">
-                <div class="btn-menu__text">Закрыть</div>
+        <div class="header__content-wrapper">
+          <div class="l-container">
+            <div class="header__content">
+              <div class="header__btn-menu">
+                <div class="btn-menu">
+                  <div class="btn-menu__text">Закрыть</div>
+                </div>
+              </div>
+              <div class="header__logo logo logo--elle"><span class="logo__text">Специальный проект</span>
+                      <svg class="icon logo__icon ml-3">
+                        <use xlink:href="#elle"></use>
+                      </svg>
+              </div>
+              <div class="header__logo logo logo--psy"><span class="logo__text">Специальный проект</span>
+                      <svg class="icon logo__icon ml-3">
+                        <use xlink:href="#psy"></use>
+                      </svg>
+              </div>
+              <div class="header__logo logo logo--mc"><span class="logo__text">Специальный проект</span>
+                      <svg class="icon logo__icon ml-3">
+                        <use xlink:href="#marie-claire"></use>
+                      </svg>
+              </div>
+              <div class="header__logo logo logo--nioxin">
+                      <svg class="icon logo__icon">
+                        <use xlink:href="#nioxin"></use>
+                      </svg>
               </div>
             </div>
-            <div class="header__logo logo logo--elle"><span class="logo__text">Специальный проект</span>
-                    <svg class="icon logo__icon ml-3">
-                      <use xlink:href="#elle"></use>
-                    </svg>
-            </div>
-            <div class="header__logo logo logo--psy"><span class="logo__text">Специальный проект</span>
-                    <svg class="icon logo__icon ml-3">
-                      <use xlink:href="#psy"></use>
-                    </svg>
-            </div>
-            <div class="header__logo logo logo--mc"><span class="logo__text">Специальный проект</span>
-                    <svg class="icon logo__icon ml-3">
-                      <use xlink:href="#marie-claire"></use>
-                    </svg>
-            </div>
           </div>
-          <div class="header__menu">
-            <nav class="main-nav">
-              <ul class="main-nav__list">
-                <li class="main-nav__item"><a class="main-nav__link" href="https://www.nioxin.com/ru-RU/salonfinder" target="_blank">
-                    <div class="main-nav__img"><img src="../build/img/menu/salon-finder.png"></div>
-                    <div class="main-nav__text">найти&nbsp;салоны Nioxin</div></a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="istomina.html" target="">
-                    <div class="main-nav__img"><img src="../build/img/menu/istomina.png"></div>
-                    <div class="main-nav__text">Карина Истомина</div></a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="popova.html" target="">
-                    <div class="main-nav__img"><img src="../build/img/menu/popova.png"></div>
-                    <div class="main-nav__text">Анастасия Попова</div></a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="phillipova.html" target="">
-                    <div class="main-nav__img"><img src="../build/img/menu/phillipova.png"></div>
-                    <div class="main-nav__text">София Филиппова</div></a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="varapanova.html" target="">
-                    <div class="main-nav__img"><img src="../build/img/menu/varapanova.png"></div>
-                    <div class="main-nav__text">Юлия Варапанова</div></a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="/" target="">
-                    <div class="main-nav__img"><img src="../build/img/menu/more-products.png"></div>
-                    <div class="main-nav__text">Главная<br>страница</div></a></li>
-              </ul>
-            </nav>
+        </div>
+        <div class="header__menu-wrapper">
+          <div class="l-container">
+            <div class="header__menu">
+              <nav class="main-nav">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item"><a class="main-nav__link" href="https://www.nioxin.com/ru-RU/salonfinder" target="_blank">
+                      <div class="main-nav__img"><img src="../build/img/menu/salon-finder.png"></div>
+                      <div class="main-nav__text">найти&nbsp;салоны Nioxin</div></a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="istomina.html" target="">
+                      <div class="main-nav__img"><img src="../build/img/menu/istomina.png"></div>
+                      <div class="main-nav__text">Карина Истомина</div></a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="popova.html" target="">
+                      <div class="main-nav__img"><img src="../build/img/menu/popova.png"></div>
+                      <div class="main-nav__text">Анастасия Попова</div></a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="phillipova.html" target="">
+                      <div class="main-nav__img"><img src="../build/img/menu/phillipova.png"></div>
+                      <div class="main-nav__text">София Филиппова</div></a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="varapanova.html" target="">
+                      <div class="main-nav__img"><img src="../build/img/menu/varapanova.png"></div>
+                      <div class="main-nav__text">Юлия Варапанова</div></a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="/" target="">
+                      <div class="main-nav__img"><img src="../build/img/menu/more-products.png"></div>
+                      <div class="main-nav__text">Главная<br>страница</div></a></li>
+                </ul>
+                      <div class="social social--inline">
+                        <div id="share"></div>
+                      </div>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
@@ -174,6 +188,8 @@
                         <div class="slide__text mCustomScrollbar" data-mcs-theme="rounded-dark"><p>Каждый раз обещаю себе ничего не&nbsp;брать, кроме купальников и&nbsp;пары легких платьев, но&nbsp;женское начало губит все на&nbsp;корню. И&nbsp;в&nbsp;этот раз потеряв часть багажа&nbsp;&mdash; я&nbsp;не&nbsp;пожалела об&nbsp;этом.</br>Помимо одежды и&nbsp;лекарств с&nbsp;ингалятором (на&nbsp;черный день), с&nbsp;нами &laquo;высадился&raquo; целый десант средств для лица и&nbsp;тела, ну&nbsp;и, продолжая свой марафон <a hre='#' target='_blank'>#nioxin30days</a>, захватила и&nbsp;их&nbsp;с&nbsp;собой&nbsp;&mdash; в&nbsp;пару к&nbsp;полноразмерной трехступенчатой системе ухода в @colbacolorbar утащила и&nbsp;набор тревел-флаконов по&nbsp;150&nbsp;мл каждый. Вообще муж меня называет человек-пробник (у&nbsp;меня с&nbsp;собой всегда все в&nbsp;тревел-формате: крема, маски, шампуни, лосьоны для всех частей тела). Но&nbsp;если честно, даже если&nbsp;бы не&nbsp;было этих маленьких баночек, я&nbsp;не&nbsp;пожалела&nbsp;бы места в&nbsp;багаже и&nbsp;на&nbsp;обычные: мягкий шампунь со&nbsp;сладковато-мятным ароматом я&nbsp;уже не&nbsp;променяю на&nbsp;бодро пенящуюся &laquo;химию&raquo; из&nbsp;отеля. Думаю, в&nbsp;плюс 35&nbsp;дополнительное охлаждение хотя&nbsp;бы коже головы не&nbsp;помешает. А&nbsp;главное, мне нравится эффект&nbsp;&mdash; волосы очищаются эффективно, но&nbsp;бережно: кожа головы не&nbsp;сохнет, а&nbsp;цвет не&nbsp;вымывается. Кондиционер и&nbsp;маска тоже &laquo;отличники&raquo;&nbsp;&mdash; здорово питают локоны, и&nbsp;на&nbsp;них в&nbsp;поездке особая надежда. Судя по&nbsp;чудесным метаморфозам, которые уже произошли с&nbsp;волосами, есть все шансы вернуться домой с&nbsp;роскошной гривой, а&nbsp;не&nbsp;пересушенным солнцем и&nbsp;морем веником. Что для вас главный курортный must have и&nbsp;без чего в&nbsp;чемодане вы&nbsp;никогда не&nbsp;поедете в&nbsp;отпуск? Пользуетесь&nbsp;ли отельными средствами? Я&nbsp;если только гелем для душа и&nbsp;кремом для тела, но&nbsp;только при условии, что эта какая-то моя любимая марка (но&nbsp;такое бывает нечасто). Ещё меня спрашивали про <a hre='#' target='_blank'>Nioxin</a> от&nbsp;выпадения: правда&nbsp;ли помогает? Отвечаю&nbsp;&mdash; правда!!! Главное&nbsp;&mdash; правильно подобрать линию ухода (можно это сделать в&nbsp;колбе и&nbsp;бесплатно) и&nbsp;РЕГУЛЯРНО использовать! Я&nbsp;после вторых родов почти не&nbsp;линяла и&nbsp;знаю много подруг, которые боролись с&nbsp;этой проблемой именно ниоксином, а&nbsp;также нескольких мужчин, которые давно пользуются этими средствами для профилактики и&nbsp;густоты волос�</p></div>
                       </div>
                     </div>
+                    <div class="owl-dots owl-dots--top"></div>
+                    <div class="owl-dots owl-dots--bottom"></div>
                   </div>
                 </div>
               </div>
@@ -188,15 +204,15 @@
                   </div>
                   <div class="expert__content">
                     <div class="expert__media">
-                      <div class="expert__img"><img src="../build/img/popova/expert-img.jpg" alt=""></div>
+                      <div class="expert__img"><img src="../build/img/popova/expert-img-mobile.jpg" alt=""></div>
                     </div>
                     <div class="expert__info">
                       <div class="expert__about">
+                        <div class="expert__photo"><img src="../build/img/popova/expert.png" alt="Тимур Бегичев"></div>
                         <div class="expert__about-info">
                           <div class="expert__name">Тимур Бегичев</div>
                           <div class="expert__position">Топ&#8209;Стилист Wella Professionals Russia. Эксперт Nioxin. Владелец «Студии красоты Тимура Бегичева». Звездный стилист.</div>
                         </div>
-                        <div class="expert__photo"><img src="../build/img/popova/expert.png" alt="Тимур Бегичев"></div>
                       </div>
                     </div>
                   </div>

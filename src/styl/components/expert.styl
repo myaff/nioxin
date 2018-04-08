@@ -49,7 +49,7 @@
     padding-top: 30px;
     @media $mobile {
       flex-basis: 380px;
-      padding-top: 40px;
+      padding-top: 10px;
       margin-left: -150px;
     }
   }
@@ -67,12 +67,16 @@
     }
     @media $mobile {
       margin: 30px auto;
+      
+      .page--varapanova & {
+        margin: 40px auto 45px;
+      }
     }
   }
   &__about-info {
     text-align: center;
     padding-bottom: 30px;
-    margin-bottom: 20px;
+    margin: 30px 0;
     flex: 0 0 auto;
     width: 100%;
     
@@ -83,6 +87,20 @@
       absolute(0, 50%, 0px);
       transform: translateX(-50%);
       background: $primary.bg;
+    }
+    
+    @media $mobile {
+      .page--popova & {
+        padding-bottom: 60px;
+      }
+      .page--varapanova & {
+        padding: 50px 0 0;
+        
+        &::after {
+          top: 0;
+          bottom: auto;
+        }
+      }
     }
   }
   &__name {

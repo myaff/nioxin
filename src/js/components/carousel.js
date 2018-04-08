@@ -10,6 +10,7 @@ let carouselDefaultOptions = {
   navText: ['<svg class="icon"><use xlink:href="#prev"/></svg>', '<svg class="icon"><use xlink:href="#next"/></svg>'],
   dots: true,
   dotsData: true,
+  dotsContainer: '.owl-dots',
   loop: false,
   stagePadding: 50,
   mouseDrag: false,
@@ -46,11 +47,27 @@ function carouselInitByCondition(carousel, options, condition) {
   }
 }
 
+function synhDots(event) {
+  let page = event.page.index == -1 ? 0 : event.page.index;
+  let dots = $(event.target).siblings('.owl-dots--bottom').children('.owl-dot');
+  dots.eq(page).siblings().removeClass('active');
+  dots.eq(page).addClass('active');
+}
+
 /**
  * Инициализация карусели
  */
 function init(){
+  carouselDefault.on('initialized.owl.carousel', function(event) {
+    setTimeout(function() {
+      synhDots(event);
+    }, 100, event);
+  });
   carouselDefault.owlCarousel(carouselDefaultOptions);
+  carouselDefault.on('changed.owl.carousel', function(event) {
+    synhDots(event);
+  });
+  
   carouselInitByCondition(carouselMobile, carouselMobileOptions, Main.DeviceDetection.isMobileVersion());
   
   // init on resize

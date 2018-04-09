@@ -37,9 +37,11 @@
     transform-origin: top center;
     transition: transform 0.7s;
     
-    &:hover {
-      transform: translateY(-20px);
-      color: $gray.text;
+    @media $desktop {
+      &:hover {
+        transform: translateY(-20px);
+        color: $gray.text;
+      }
     }
     &.disabled {
       pointer-events: none;

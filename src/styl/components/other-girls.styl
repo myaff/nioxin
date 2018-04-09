@@ -71,8 +71,10 @@
     transform-origin: top center;
     transition: transform 0.7s;
     
-    &:hover {
-      transform: translateY(-20px);
+    @media $desktop {
+      &:hover {
+        transform: translateY(-20px);
+      }
     }
   }
   &__link {
